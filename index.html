@@ -5,62 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>East Midlands Taxi Beeston | Long Distance & Airport Transfers | 07749 716642</title>
-    
     <link rel="canonical" href="https://www.eastmidlandstaxibeeston.co.uk/">
-
-    <meta name="description" content="East Midlands Taxi Beeston. Premium long-distance taxi service from Beeston to East Midlands Airport, Birmingham & Manchester. Reliable executive travel. Book now: 07749 716642.">
-    <meta name="keywords" content="East Midlands Taxi Beeston, Taxi Beeston, Beeston Airport Transfers, Long Distance Taxi Nottingham, Taxi Beeston to EMA, Executive Travel NG9">
-    <meta name="author" content="East Midlands Taxi Beeston">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="East Midlands Taxi Beeston. Premium long-distance taxi service from Beeston to East Midlands Airport, Birmingham & Manchester. Reliable executive travel.">
+    <meta name="keywords" content="East Midlands Taxi Beeston, Taxi Beeston, Airport Transfers Nottingham, Long Distance Taxi">
     
-    <meta name="geo.region" content="GB-NTT">
-    <meta name="geo.placename" content="Beeston">
-    <meta name="geo.position" content="52.927;-1.214">
-    <meta name="ICBM" content="52.927, -1.214">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.eastmidlandstaxibeeston.co.uk/">
-    <meta property="og:site_name" content="East Midlands Taxi Beeston">
-    <meta property="og:title" content="East Midlands Taxi Beeston | Reliable Airport Transfers">
-    <meta property="og:description" content="Book your long-distance taxi from Beeston. Specializing in airport transfers to EMA, Birmingham & Manchester.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TaxiService",
-      "@id": "https://www.eastmidlandstaxibeeston.co.uk",
-      "name": "East Midlands Taxi Beeston",
-      "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d",
-      "telephone": "+447749716642",
-      "url": "https://www.eastmidlandstaxibeeston.co.uk",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Beeston",
-        "addressLocality": "Beeston",
-        "addressRegion": "Nottinghamshire",
-        "postalCode": "NG9",
-        "addressCountry": "UK"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "52.927",
-        "longitude": "-1.214"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Beeston" },
-        { "@type": "City", "name": "Nottingham" },
-        { "@type": "Place", "name": "East Midlands Airport" }
-      ],
-      "priceRange": "££",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    }
-    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -154,10 +102,6 @@
             margin-right: 15px;
             transition: 0.3s;
         }
-        .theme-switch:hover {
-            background-color: var(--primary-color);
-            color: #000;
-        }
 
         /* Hero Section */
         .hero {
@@ -171,7 +115,7 @@
             color: #fff; 
         }
         .hero h1 {
-            font-size: 3rem; /* Adjusted for mobile fit */
+            font-size: 3rem; 
             font-weight: 800;
             margin-bottom: 20px;
         }
@@ -179,7 +123,7 @@
             .hero h1 { font-size: 4rem; }
         }
 
-        /* Service Note Cards */
+        /* Pricing & Services */
         .service-note-section {
             background-color: var(--bg-section);
             padding: 80px 0;
@@ -206,10 +150,7 @@
             color: var(--text-muted) !important;
         }
 
-        /* Pricing Section */
-        .pricing-section {
-            padding: 80px 0;
-        }
+        .pricing-section { padding: 80px 0; }
         .price-card {
             background: var(--card-bg);
             border: none;
@@ -235,7 +176,7 @@
             color: var(--primary-color);
         }
 
-        /* Contact/Form Section */
+        /* --- CONTACT SECTION & AUTOCOMPLETE CSS --- */
         .contact-section {
             background: url('https://images.unsplash.com/photo-1468817170341-14756ee6361d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             padding: 100px 0;
@@ -274,6 +215,39 @@
             box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
         }
         .form-control::placeholder { color: #aaa; }
+
+        /* Autocomplete List Styling */
+        .autocomplete-wrapper {
+            position: relative;
+        }
+        .suggestions-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            border-radius: 0 0 8px 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none; /* Hidden by default */
+        }
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            color: #333; /* Always dark text for readability on white list */
+            font-size: 0.9rem;
+            background: #fff;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+        .suggestion-item strong {
+            color: var(--primary-color); /* Highlight match */
+        }
 
         .btn-submit {
             background-color: var(--primary-color);
@@ -320,20 +294,16 @@
 
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-taxi me-2"></i> Beeston Taxi</a>
-            
+            <a class="navbar-brand" href="#"><i class="fas fa-taxi me-2"></i> Beeston Taxi </a>
             <div class="d-flex align-items-center order-lg-last ms-3">
                 <button class="theme-switch" id="themeToggle" title="Toggle Light/Dark Mode" aria-label="Switch Theme">
                     <i class="fas fa-sun"></i>
                 </button>
-                
-                <a href="tel:07749716642" class="btn btn-call d-none d-lg-block" aria-label="Call us now"><i class="fas fa-phone-alt me-2"></i> 07749 716642</a>
-                
-                <button class="navbar-toggler ms-2 bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a href="tel:07749716642" class="btn btn-call d-none d-lg-block"><i class="fas fa-phone-alt me-2"></i> 07749 716642</a>
+                <button class="navbar-toggler ms-2 bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -382,10 +352,9 @@
     <section id="prices" class="pricing-section">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title">Popular Routes from Beeston</h2>
+                <h2 class="section-title">Popular Routes</h2>
                 <p class="text-muted-custom mb-5">Estimated prices for our most popular long-distance routes.</p>
             </div>
-            
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card price-card p-4">
@@ -418,9 +387,6 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <small class="text-muted-custom fst-italic">*Prices may vary depending on exact locations and traffic conditions.</small>
-            </div>
         </div>
     </section>
 
@@ -432,23 +398,26 @@
                     <div class="contact-form-wrapper">
                         <div class="text-center mb-4">
                             <h2>Make an Enquiry</h2>
-                            <p>Fill out the details below to receive an accurate quote via WhatsApp.</p>
+                            <p>Fill out the details below for a WhatsApp quote.</p>
                         </div>
                         
-                        <form id="quoteForm">
+                        <form id="quoteForm" autocomplete="off">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="mb-2" for="pickup">Pick-up Location</label>
-                                    <div class="input-group">
+                                    <div class="input-group autocomplete-wrapper">
                                         <span class="input-group-text bg-secondary border-secondary text-white"><i class="fas fa-map-pin"></i></span>
-                                        <input type="text" id="pickup" class="form-control" placeholder="Postcode or Address (e.g. Beeston)" required>
+                                        <input type="text" id="pickup" class="form-control" placeholder="Start typing address..." required>
+                                        <div id="pickup-list" class="suggestions-list"></div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-6 mb-3">
                                     <label class="mb-2" for="dropoff">Drop-off Location</label>
-                                    <div class="input-group">
+                                    <div class="input-group autocomplete-wrapper">
                                         <span class="input-group-text bg-secondary border-secondary text-white"><i class="fas fa-flag-checkered"></i></span>
-                                        <input type="text" id="dropoff" class="form-control" placeholder="Postcode or Airport" required>
+                                        <input type="text" id="dropoff" class="form-control" placeholder="Start typing address..." required>
+                                        <div id="dropoff-list" class="suggestions-list"></div>
                                     </div>
                                 </div>
                             </div>
@@ -466,16 +435,12 @@
 
                             <div class="mb-4 mt-2">
                                 <label class="mb-2" for="details">Contact Name / Notes</label>
-                                <input type="text" id="details" class="form-control" placeholder="Your Name or extra requirements" required>
+                                <input type="text" id="details" class="form-control" placeholder="Name or extra requirements" required>
                             </div>
 
                             <button type="submit" class="btn btn-submit rounded-pill">
                                 <i class="fab fa-whatsapp me-2"></i> Get Quote on WhatsApp
                             </button>
-                            
-                            <p class="text-center text-white mt-3 small">
-                                <i class="fas fa-check-circle text-warning me-1"></i> Clicking this opens WhatsApp with your details pre-filled.
-                            </p>
                         </form>
                     </div>
                 </div>
@@ -498,7 +463,6 @@
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = themeToggle.querySelector('i');
         const htmlElement = document.documentElement;
-
         const savedTheme = localStorage.getItem('theme') || 'dark';
         htmlElement.setAttribute('data-theme', savedTheme);
         updateIcon(savedTheme);
@@ -506,33 +470,94 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             htmlElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateIcon(newTheme);
         });
-
         function updateIcon(theme) {
-            if (theme === 'light') {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            } else {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
+            themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         }
 
-        // --- 2. WHATSAPP LOGIC ---
+        // --- 2. AUTO-SUGGEST LOGIC (UK ONLY) ---
+        function setupAutocomplete(inputId, listId) {
+            const input = document.getElementById(inputId);
+            const list = document.getElementById(listId);
+            let timeout = null;
+
+            input.addEventListener('input', function() {
+                const query = this.value;
+                
+                // Clear existing timeout (debounce)
+                if (timeout) clearTimeout(timeout);
+                
+                if (query.length < 3) {
+                    list.style.display = 'none';
+                    return;
+                }
+
+                // Wait 300ms after typing stops before searching
+                timeout = setTimeout(() => {
+                    // API Call to Photon (OpenStreetMap data)
+                    // bbox limits to roughly UK area to prioritize UK results
+                    fetch(`https://photon.komoot.io/api/?q=${query}&limit=5&bbox=-6,49.8,1.8,56`)
+                        .then(response => response.json())
+                        .then(data => {
+                            list.innerHTML = ''; // Clear old results
+                            
+                            if (data.features.length > 0) {
+                                list.style.display = 'block';
+                                data.features.forEach(feature => {
+                                    const props = feature.properties;
+                                    // Build address string
+                                    const addressParts = [
+                                        props.name, 
+                                        props.street, 
+                                        props.city, 
+                                        props.postcode
+                                    ].filter(Boolean);
+                                    const addressText = addressParts.join(', ');
+
+                                    const div = document.createElement('div');
+                                    div.classList.add('suggestion-item');
+                                    // Highlight the matching text part (basic)
+                                    div.innerHTML = `<i class="fas fa-map-marker-alt text-muted me-2"></i> ${addressText}`;
+                                    
+                                    div.addEventListener('click', function() {
+                                        input.value = addressText;
+                                        list.style.display = 'none';
+                                    });
+                                    list.appendChild(div);
+                                });
+                            } else {
+                                list.style.display = 'none';
+                            }
+                        })
+                        .catch(err => console.error('Autocomplete error:', err));
+                }, 300);
+            });
+
+            // Close list if clicked outside
+            document.addEventListener('click', function(e) {
+                if (e.target !== input && e.target !== list) {
+                    list.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize autocomplete on both fields
+        setupAutocomplete('pickup', 'pickup-list');
+        setupAutocomplete('dropoff', 'dropoff-list');
+
+
+        // --- 3. WHATSAPP LOGIC ---
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
-
             const pickup = document.getElementById('pickup').value;
             const dropoff = document.getElementById('dropoff').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
             const details = document.getElementById('details').value;
 
-            // Adding domain signature to the message for branding
             const message = `*East Midlands Taxi Beeston - Enquiry* %0a` +
                             `---------------------------%0a` +
                             `📍 *Pick-up:* ${pickup}%0a` +
@@ -544,9 +569,7 @@
                             `Please provide a price quote.`;
 
             const phoneNumber = "447749716642";
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-            window.open(whatsappUrl, '_blank');
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         });
     </script>
 </body>
