@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-GB" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>East Midlands Taxi Beeston | Long Distance & Airport Transfers | 07749 716642</title>
     <link rel="canonical" href="https://www.eastmidlandstaxibeeston.co.uk/">
-    <meta name="description" content="East Midlands Taxi Beeston. Premium long-distance taxi service from Beeston to East Midlands Airport, Birmingham & Manchester. Reliable executive travel.">
-    <meta name="keywords" content="East Midlands Taxi Beeston, Taxi Beeston, Airport Transfers Nottingham, Long Distance Taxi">
-    
+    <meta name="description"
+        content="East Midlands Taxi Beeston. Premium long-distance taxi service from Beeston to East Midlands Airport, Birmingham & Manchester. Reliable executive travel.">
+    <meta name="keywords"
+        content="East Midlands Taxi Beeston, Taxi Beeston, Airport Transfers Nottingham, Long Distance Taxi">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <style>
         /* --- THEME VARIABLES --- */
         :root {
-            --primary-color: #FFC107; 
-            
+            --primary-color: #FFC107;
+
             /* Dark Mode (Default) */
             --bg-body: #1a1a1a;
             --bg-section: #111111;
@@ -26,8 +29,8 @@
             --text-muted: #adb5bd;
             --card-bg: linear-gradient(145deg, #232323, #1e1e1e);
             --feature-bg: rgba(255, 255, 255, 0.05);
-            --feature-border: rgba(255,255,255,0.1);
-            --input-bg: rgba(0,0,0,0.5);
+            --feature-border: rgba(255, 255, 255, 0.1);
+            --input-bg: rgba(0, 0, 0, 0.5);
             --input-text: #fff;
             --input-border: #444;
             --footer-bg: #000;
@@ -42,8 +45,8 @@
             --text-muted: #6c757d;
             --card-bg: linear-gradient(145deg, #ffffff, #f0f0f0);
             --feature-bg: rgba(0, 0, 0, 0.03);
-            --feature-border: rgba(0,0,0,0.1);
-            --input-bg: rgba(255,255,255,0.9);
+            --feature-border: rgba(0, 0, 0, 0.1);
+            --input-bg: rgba(255, 255, 255, 0.9);
             --input-text: #333;
             --input-border: #ccc;
             --footer-bg: #e9ecef;
@@ -63,22 +66,26 @@
             backdrop-filter: blur(10px);
             padding: 15px 0;
             transition: background-color 0.3s;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         .navbar-brand {
             font-weight: 700;
             color: var(--text-main) !important;
             font-size: 1.2rem;
             text-transform: uppercase;
         }
+
         .nav-link {
             color: var(--text-muted) !important;
             transition: 0.3s;
             font-weight: 600;
         }
+
         .nav-link:hover {
             color: var(--primary-color) !important;
         }
+
         .btn-call {
             background-color: var(--primary-color);
             color: #111;
@@ -105,22 +112,26 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             height: 85vh;
             display: flex;
             align-items: center;
             position: relative;
-            color: #fff; 
+            color: #fff;
         }
+
         .hero h1 {
-            font-size: 3rem; 
+            font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
         }
+
         @media (min-width: 992px) {
-            .hero h1 { font-size: 4rem; }
+            .hero h1 {
+                font-size: 4rem;
+            }
         }
 
         /* Pricing & Services */
@@ -129,6 +140,7 @@
             padding: 80px 0;
             transition: background-color 0.3s;
         }
+
         .feature-box {
             background: var(--feature-bg);
             padding: 30px;
@@ -137,20 +149,26 @@
             border: 1px solid var(--feature-border);
             transition: transform 0.3s;
         }
+
         .feature-box:hover {
             transform: translateY(-5px);
             border-color: var(--primary-color);
         }
+
         .feature-icon {
             font-size: 2rem;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
+
         .text-muted-custom {
             color: var(--text-muted) !important;
         }
 
-        .pricing-section { padding: 80px 0; }
+        .pricing-section {
+            padding: 80px 0;
+        }
+
         .price-card {
             background: var(--card-bg);
             border: none;
@@ -159,8 +177,9 @@
             margin-bottom: 20px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         .price-card::before {
             content: '';
             position: absolute;
@@ -170,6 +189,7 @@
             height: 100%;
             background-color: var(--primary-color);
         }
+
         .price-amount {
             font-size: 2.5rem;
             font-weight: 700;
@@ -182,44 +202,56 @@
             padding: 100px 0;
             position: relative;
         }
+
         .overlay {
-            background: rgba(0,0,0,0.7); 
+            background: rgba(0, 0, 0, 0.7);
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
+
         .contact-form-wrapper {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             padding: 40px;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             position: relative;
             z-index: 2;
         }
-        .contact-form-wrapper h2, 
-        .contact-form-wrapper p, 
+
+        .contact-form-wrapper h2,
+        .contact-form-wrapper p,
         .contact-form-wrapper label {
             color: #fff !important;
         }
 
-        .form-control, .form-select {
+        .form-control,
+        .form-select {
             background-color: var(--input-bg);
             border: 1px solid var(--input-border);
             color: var(--input-text);
             padding: 15px;
         }
+
         .form-control:focus {
             background-color: var(--input-bg);
             color: var(--input-text);
             border-color: var(--primary-color);
             box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
         }
-        .form-control::placeholder { color: #aaa; }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
 
         /* Autocomplete List Styling */
         .autocomplete-wrapper {
             position: relative;
         }
+
         .suggestions-list {
             position: absolute;
             top: 100%;
@@ -230,23 +262,29 @@
             border-radius: 0 0 8px 8px;
             max-height: 200px;
             overflow-y: auto;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            display: none; /* Hidden by default */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            /* Hidden by default */
         }
+
         .suggestion-item {
             padding: 10px 15px;
             cursor: pointer;
             border-bottom: 1px solid #eee;
-            color: #333; /* Always dark text for readability on white list */
+            color: #333;
+            /* Always dark text for readability on white list */
             font-size: 0.9rem;
             background: #fff;
         }
+
         .suggestion-item:hover {
             background-color: #f0f0f0;
             color: #000;
         }
+
         .suggestion-item strong {
-            color: var(--primary-color); /* Highlight match */
+            color: var(--primary-color);
+            /* Highlight match */
         }
 
         .btn-submit {
@@ -259,6 +297,7 @@
             border: none;
             transition: 0.3s;
         }
+
         .btn-submit:hover {
             background-color: #ffca2c;
             transform: scale(1.02);
@@ -280,6 +319,7 @@
             font-weight: 700;
             color: var(--text-main);
         }
+
         .section-title::after {
             content: '';
             display: block;
@@ -290,6 +330,7 @@
         }
     </style>
 </head>
+
 <body id="home">
 
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
@@ -299,8 +340,10 @@
                 <button class="theme-switch" id="themeToggle" title="Toggle Light/Dark Mode" aria-label="Switch Theme">
                     <i class="fas fa-sun"></i>
                 </button>
-                <a href="tel:07749716642" class="btn btn-call d-none d-lg-block"><i class="fas fa-phone-alt me-2"></i> 07749 716642</a>
-                <button class="navbar-toggler ms-2 bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <a href="tel:07749716642" class="btn btn-call d-none d-lg-block"><i class="fas fa-phone-alt me-2"></i>
+                    07749 716642</a>
+                <button class="navbar-toggler ms-2 bg-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -310,7 +353,8 @@
                     <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
                     <li class="nav-item"><a class="nav-link" href="#enquiry">Book Online</a></li>
                     <li class="nav-item d-lg-none mt-3">
-                        <a href="tel:07749716642" class="btn btn-call w-100"><i class="fas fa-phone-alt me-2"></i> Call Now</a>
+                        <a href="tel:07749716642" class="btn btn-call w-100"><i class="fas fa-phone-alt me-2"></i> Call
+                            Now</a>
                     </li>
                 </ul>
             </div>
@@ -335,14 +379,16 @@
                     <div class="feature-box">
                         <i class="fas fa-road feature-icon"></i>
                         <h4>Long Distance Specialists</h4>
-                        <p class="text-muted-custom">We are the experts in long-haul travel from Beeston. We prioritize comfort and reliability for airport runs and business trips.</p>
+                        <p class="text-muted-custom">We are the experts in long-haul travel from Beeston. We prioritize
+                            comfort and reliability for airport runs and business trips.</p>
                     </div>
                 </div>
                 <div class="col-md-5 mb-4">
                     <div class="feature-box">
                         <i class="fas fa-map-marker-alt feature-icon"></i>
                         <h4>Minimum Distance Policy</h4>
-                        <p class="text-muted-custom">To maintain efficiency for our long-distance clients, we only accept bookings for journeys <strong>over 5 miles</strong>.</p>
+                        <p class="text-muted-custom">To maintain efficiency for our long-distance clients, we only
+                            accept bookings for journeys <strong>over 5 miles</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -360,7 +406,8 @@
                     <div class="card price-card p-4">
                         <div class="card-body text-center">
                             <h5 class="card-title text-uppercase small text-muted-custom">Airport Transfer</h5>
-                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i> EMA</h3>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i> EMA
+                            </h3>
                             <div class="price-amount">£35</div>
                             <p class="text-muted-custom small mt-3">East Midlands Airport</p>
                         </div>
@@ -370,7 +417,8 @@
                     <div class="card price-card p-4">
                         <div class="card-body text-center">
                             <h5 class="card-title text-uppercase small text-muted-custom">City Transfer</h5>
-                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i> Birmingham</h3>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i>
+                                Birmingham</h3>
                             <div class="price-amount">£100</div>
                             <p class="text-muted-custom small mt-3">City Centre / Airport</p>
                         </div>
@@ -380,13 +428,180 @@
                     <div class="card price-card p-4">
                         <div class="card-body text-center">
                             <h5 class="card-title text-uppercase small text-muted-custom">City Transfer</h5>
-                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i> Manchester</h3>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i>
+                                Manchester</h3>
                             <div class="price-amount">£160</div>
                             <p class="text-muted-custom small mt-3">City Centre / Airport</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-white py-5 border-top border-secondary">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="text-warning mb-4 text-center">
+                        Beeston's Premier Long Distance Taxi Service
+                    </h2>
+                    <p class="lead text-light">
+                        Welcome to <strong>East Midlands Taxi Beeston</strong>. We are the leading specialists in
+                        long-distance travel and airport transfers in the <strong>NG9 area</strong>.
+                        Unlike standard local cab firms, we are dedicated exclusively to longer journeys, ensuring our
+                        vehicles are always available for your critical airport runs, business meetings, and inter-city
+                        travel.
+                    </p>
+                    <p class="text-secondary">
+                        Based in the heart of Beeston, Nottingham, we proudly serve the surrounding communities
+                        including <strong>Chilwell, Attenborough, Toton, Bramcote, and Wollaton</strong>.
+                        Whether you need a taxi to East Midlands Airport for a holiday or an executive transfer to
+                        London, reliability is our guarantee.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-12 text-center mb-3">
+                    <h3 class="section-title">Specialist Airport Transfer Routes</h3>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-plane-departure text-warning me-2"></i> Taxi Beeston to
+                            East Midlands Airport (EMA)</h4>
+                        <p class="text-secondary mt-3">
+                            East Midlands Airport is our most popular route. Located just 20-25 minutes from Beeston via
+                            the A52 and M1, we offer a seamless door-to-terminal service.
+                            Forget the stress of airport parking buses. Our <strong>Beeston to EMA taxi service</strong>
+                            starts from just <strong>£35</strong>, making it a cost-effective choice for couples and
+                            families.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-briefcase text-warning me-2"></i> Beeston to Birmingham
+                            Airport (BHX)</h4>
+                        <p class="text-secondary mt-3">
+                            Traveling further afield? Our <strong>taxi transfers to Birmingham Airport</strong> provide
+                            a comfortable workspace for business travelers.
+                            Avoid the crowded trains and multiple connections. We pick you up from your doorstep in NG9
+                            and drop you specifically at the departure zone.
+                            Perfect for residents of <strong>Long Eaton and Chilwell</strong> looking for direct
+                            executive travel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-road text-warning me-2"></i> Taxi Beeston to Manchester
+                            Airport</h4>
+                        <p class="text-secondary mt-3">
+                            The journey to Manchester Airport can be tiring. Our long-distance fleet ensures you arrive
+                            relaxed.
+                            With fixed prices starting from <strong>£160</strong>, we offer a competitive alternative to
+                            rail travel for groups.
+                            We track your return flight to ensure your driver is waiting at arrivals, regardless of
+                            delays.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-city text-warning me-2"></i> Long Distance to London &
+                            Heathrow</h4>
+                        <p class="text-secondary mt-3">
+                            We provide specialist long-haul transfers from Nottinghamshire to <strong>London Heathrow,
+                                Gatwick, and Stansted</strong>.
+                            Why drive for 3+ hours? Let our professional drivers navigate the M1 and M25 while you rest.
+                            Advanced booking is highly recommended for London routes to secure the best fixed-price
+                            rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="h5 text-light mb-3">Areas We Cover (NG9 & Beyond)</h3>
+                    <p class="text-secondary small">
+                        While we are based in Beeston, our long-distance taxi service covers:
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge bg-secondary">Beeston</span>
+                        <span class="badge bg-secondary">Chilwell</span>
+                        <span class="badge bg-secondary">Attenborough</span>
+                        <span class="badge bg-secondary">Toton</span>
+                        <span class="badge bg-secondary">Bramcote</span>
+                        <span class="badge bg-secondary">Stapleford</span>
+                        <span class="badge bg-secondary">Wollaton</span>
+                        <span class="badge bg-secondary">Long Eaton</span>
+                        <span class="badge bg-secondary">Lenton Abbey</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="text-center text-warning mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion accordion-flush" id="seoFaq">
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-1">
+                                    How much is a taxi from Beeston to East Midlands Airport?
+                                </button>
+                            </h2>
+                            <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    Our prices for a taxi from Beeston to East Midlands Airport start from
+                                    <strong>£35</strong>. This is a fully inclusive quote with no hidden meter charges.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-2">
+                                    Do you accept card payments?
+                                </button>
+                            </h2>
+                            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    Yes, we accept cash and bank transfers. For long-distance bookings, we can provide
+                                    an invoice receipt for business expenses.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-3">
+                                    Can I book a short taxi ride within Beeston?
+                                </button>
+                            </h2>
+                            <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    We specialize in <strong>long-distance travel only</strong>. To ensure availability
+                                    for our airport and inter-city clients, we have a minimum journey distance of 5
+                                    miles.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -400,23 +615,27 @@
                             <h2>Make an Enquiry</h2>
                             <p>Fill out the details below for a WhatsApp quote.</p>
                         </div>
-                        
+
                         <form id="quoteForm" autocomplete="off">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="mb-2" for="pickup">Pick-up Location</label>
                                     <div class="input-group autocomplete-wrapper">
-                                        <span class="input-group-text bg-secondary border-secondary text-white"><i class="fas fa-map-pin"></i></span>
-                                        <input type="text" id="pickup" class="form-control" placeholder="Start typing address..." required>
+                                        <span class="input-group-text bg-secondary border-secondary text-white"><i
+                                                class="fas fa-map-pin"></i></span>
+                                        <input type="text" id="pickup" class="form-control"
+                                            placeholder="Start typing address..." required>
                                         <div id="pickup-list" class="suggestions-list"></div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-6 mb-3">
                                     <label class="mb-2" for="dropoff">Drop-off Location</label>
                                     <div class="input-group autocomplete-wrapper">
-                                        <span class="input-group-text bg-secondary border-secondary text-white"><i class="fas fa-flag-checkered"></i></span>
-                                        <input type="text" id="dropoff" class="form-control" placeholder="Start typing address..." required>
+                                        <span class="input-group-text bg-secondary border-secondary text-white"><i
+                                                class="fas fa-flag-checkered"></i></span>
+                                        <input type="text" id="dropoff" class="form-control"
+                                            placeholder="Start typing address..." required>
                                         <div id="dropoff-list" class="suggestions-list"></div>
                                     </div>
                                 </div>
@@ -435,7 +654,8 @@
 
                             <div class="mb-4 mt-2">
                                 <label class="mb-2" for="details">Contact Name / Notes</label>
-                                <input type="text" id="details" class="form-control" placeholder="Name or extra requirements" required>
+                                <input type="text" id="details" class="form-control"
+                                    placeholder="Name or extra requirements" required>
                             </div>
 
                             <button type="submit" class="btn btn-submit rounded-pill">
@@ -452,7 +672,8 @@
         <div class="container">
             <h3 class="mb-3">Book your Beeston Taxi Today</h3>
             <a href="tel:07749716642" class="text-decoration-none display-6 text-warning fw-bold">07749 716642</a>
-            <p class="text-muted-custom mt-4 mb-0">&copy; 2025 East Midlands Taxi Beeston. Serving Beeston, Nottingham & Beyond.</p>
+            <p class="text-muted-custom mt-4 mb-0">&copy; 2025 East Midlands Taxi Beeston. Serving Beeston, Nottingham &
+                Beyond.</p>
         </div>
     </footer>
 
@@ -484,12 +705,12 @@
             const list = document.getElementById(listId);
             let timeout = null;
 
-            input.addEventListener('input', function() {
+            input.addEventListener('input', function () {
                 const query = this.value;
-                
+
                 // Clear existing timeout (debounce)
                 if (timeout) clearTimeout(timeout);
-                
+
                 if (query.length < 3) {
                     list.style.display = 'none';
                     return;
@@ -503,16 +724,16 @@
                         .then(response => response.json())
                         .then(data => {
                             list.innerHTML = ''; // Clear old results
-                            
+
                             if (data.features.length > 0) {
                                 list.style.display = 'block';
                                 data.features.forEach(feature => {
                                     const props = feature.properties;
                                     // Build address string
                                     const addressParts = [
-                                        props.name, 
-                                        props.street, 
-                                        props.city, 
+                                        props.name,
+                                        props.street,
+                                        props.city,
                                         props.postcode
                                     ].filter(Boolean);
                                     const addressText = addressParts.join(', ');
@@ -521,8 +742,8 @@
                                     div.classList.add('suggestion-item');
                                     // Highlight the matching text part (basic)
                                     div.innerHTML = `<i class="fas fa-map-marker-alt text-muted me-2"></i> ${addressText}`;
-                                    
-                                    div.addEventListener('click', function() {
+
+                                    div.addEventListener('click', function () {
                                         input.value = addressText;
                                         list.style.display = 'none';
                                     });
@@ -537,7 +758,7 @@
             });
 
             // Close list if clicked outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (e.target !== input && e.target !== list) {
                     list.style.display = 'none';
                 }
@@ -550,8 +771,8 @@
 
 
         // --- 3. WHATSAPP LOGIC ---
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault(); 
+        document.getElementById('quoteForm').addEventListener('submit', function (e) {
+            e.preventDefault();
             const pickup = document.getElementById('pickup').value;
             const dropoff = document.getElementById('dropoff').value;
             const date = document.getElementById('date').value;
@@ -559,18 +780,19 @@
             const details = document.getElementById('details').value;
 
             const message = `*East Midlands Taxi Beeston - Enquiry* %0a` +
-                            `---------------------------%0a` +
-                            `📍 *Pick-up:* ${pickup}%0a` +
-                            `🏁 *Drop-off:* ${dropoff}%0a` +
-                            `📅 *Date:* ${date}%0a` +
-                            `⏰ *Time:* ${time}%0a` +
-                            `📝 *Details:* ${details}%0a` +
-                            `---------------------------%0a` +
-                            `Please provide a price quote.`;
+                `---------------------------%0a` +
+                `📍 *Pick-up:* ${pickup}%0a` +
+                `🏁 *Drop-off:* ${dropoff}%0a` +
+                `📅 *Date:* ${date}%0a` +
+                `⏰ *Time:* ${time}%0a` +
+                `📝 *Details:* ${details}%0a` +
+                `---------------------------%0a` +
+                `Please provide a price quote.`;
 
             const phoneNumber = "447749716642";
             window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         });
     </script>
 </body>
+
 </html>
