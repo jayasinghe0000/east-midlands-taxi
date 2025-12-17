@@ -1,252 +1,809 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" data-theme="dark">
 
 <head>
-    <meta name="description" content="Attendant Work Schedule View" />
-    <meta charset="utf-8" />
-    <title>Attendant Work Schedule - MSMIS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taxis Beeston | Beeston Minibus Taxis | Long Distance & Airport Transfers | Beeston Taxis Near Me | Book 24/7 Rides | Beeston Nottingham Taxi Service | Beeston London Taxis | 07749 716642</title>
+    
+    <link rel="canonical" href="https://www.beestonlondontaxis.co.uk/">
+    
+    <meta name="description"
+        content="Specialist taxi service from Beeston (NG9) to London, Heathrow, Gatwick & Luton. Fixed price executive travel. Reliable airport transfers from Chilwell, Toton & Nottingham. Call 07749 716642.">
+    <meta name="keywords"
+        content="Taxi Beeston to London, Taxi Beeston to Heathrow, Beeston Airport Transfers, Executive Taxi NG9, Long Distance Taxi Nottingham, Chilwell to London Taxi, Beeston Minibus Service, Beeston Taxi Service, Beeston London Taxis, Nottingham to Gatwick Taxi">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- THEME VARIABLES --- */
+        :root {
+            --primary-color: #FFC107;
+
+            /* Dark Mode (Default) */
+            --bg-body: #1a1a1a;
+            --bg-section: #111111;
+            --bg-nav: rgba(26, 26, 26, 0.95);
+            --text-main: #f8f9fa;
+            --text-muted: #adb5bd;
+            --card-bg: linear-gradient(145deg, #232323, #1e1e1e);
+            --feature-bg: rgba(255, 255, 255, 0.05);
+            --feature-border: rgba(255, 255, 255, 0.1);
+            --input-bg: rgba(0, 0, 0, 0.5);
+            --input-text: #fff;
+            --input-border: #444;
+            --footer-bg: #000;
+        }
+
+        /* Light Mode Overrides */
+        [data-theme="light"] {
+            --bg-body: #f4f6f9;
+            --bg-section: #ffffff;
+            --bg-nav: rgba(255, 255, 255, 0.95);
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --card-bg: linear-gradient(145deg, #ffffff, #f0f0f0);
+            --feature-bg: rgba(0, 0, 0, 0.03);
+            --feature-border: rgba(0, 0, 0, 0.1);
+            --input-bg: rgba(255, 255, 255, 0.9);
+            --input-text: #333;
+            --input-border: #ccc;
+            --footer-bg: #e9ecef;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--bg-nav);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-main) !important;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .nav-link {
+            color: var(--text-muted) !important;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .btn-call {
+            background-color: var(--primary-color);
+            color: #111;
+            font-weight: 700;
+            border-radius: 30px;
+            padding: 8px 20px;
+        }
+
+        /* Theme Toggle Button */
+        .theme-switch {
+            background: none;
+            border: 2px solid var(--primary-color);
+            color: var(--text-main);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Custom Hero Button Styling */
+        .btn-hero-call {
+            background-color: var(--primary-color);
+            color: #000;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+        .btn-hero-call:hover {
+            transform: scale(1.05);
+            background-color: #ffca2c;
+            color: #000;
+        }
+
+        /* Pricing & Services */
+        .service-note-section {
+            background-color: var(--bg-section);
+            padding: 80px 0;
+            transition: background-color 0.3s;
+        }
+
+        .feature-box {
+            background: var(--feature-bg);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--feature-border);
+            transition: transform 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .text-muted-custom {
+            color: var(--text-muted) !important;
+        }
+
+        .pricing-section {
+            padding: 80px 0;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: none;
+            border-radius: 15px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* --- CONTACT SECTION & AUTOCOMPLETE CSS --- */
+        .contact-section {
+            background: url('https://images.unsplash.com/photo-1468817170341-14756ee6361d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-form-wrapper h2,
+        .contact-form-wrapper p,
+        .contact-form-wrapper label {
+            color: #fff !important;
+        }
+
+        .form-control,
+        .form-select {
+            background-color: var(--input-bg);
+            border: 1px solid var(--input-border);
+            color: var(--input-text);
+            padding: 15px;
+        }
+
+        .form-control:focus {
+            background-color: var(--input-bg);
+            color: var(--input-text);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        /* Autocomplete List Styling */
+        .autocomplete-wrapper {
+            position: relative;
+        }
+
+        .suggestions-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #fff;
+            border-radius: 0 0 8px 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            /* Hidden by default */
+        }
+
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            /* Always dark text for readability on white list */
+            font-size: 0.9rem;
+            background: #fff;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+
+        .suggestion-item strong {
+            color: var(--primary-color);
+            /* Highlight match */
+        }
+
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: black;
+            font-weight: 700;
+            padding: 15px;
+            font-size: 1.1rem;
+            width: 100%;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #ffca2c;
+            transform: scale(1.02);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--feature-border);
+            color: var(--text-main);
+            transition: background-color 0.3s;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+        }
+    </style>
+    <script>
+        window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
-<body>
-    <div>
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-    </div>
+<body id="home">
 
-    <div class="header_container">
-        <div class="logo_brand">
-            <button class="btn mobile-m-btn" type="button" id="menuToggle" aria-controls="offcanvasExample">
-                <img src="./images/menu_icon.svg" alt="">
-            </button>
-            MSMIS
-        </div>
-        <div class="header_nav_items">
-            <div class="language_container">
-                <select class="form-select text-white shadow-none border-0" style="background-color: transparent;">
-                    <option class="text-dark" selected>English</option>
-                    <option class="text-dark" value="1">Sinhala</option>
-                    <option class="text-dark" value="2">Tamil</option>
-                </select>
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-taxi me-2"></i> Beeston Taxis</a>
+            <div class="d-flex align-items-center order-lg-last ms-3">
+                <button class="theme-switch" id="themeToggle" title="Toggle Light/Dark Mode" aria-label="Switch Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="tel:07749716642" class="btn btn-call d-none d-lg-block"><i class="fas fa-phone-alt me-2"></i>
+                    07749 716642</a>
+                <button class="navbar-toggler ms-2 bg-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="header_icons">
-                <a href="#"><img src="./images/bell-solid.svg" alt="Notifications"></a>
-                <a href="#"><img src="./images/user.svg" alt="User"></a>
-            </div>
-        </div>
-    </div>
-
-    <div class="main_wrapper">
-        <div class="side_menu" id="sideMenu">
-            <div class="side_menu_wrapper">
-                <ul>
-                    <li><a href="#"><img src="./images/side-icons/Home.svg" alt="">Dashboard</a></li>
-                    <li><a href="./iv_applications.html"><img src="./images/side-icons/Applications.svg" alt="">IV
-                            Applications</a></li>
-                    <li><a href="#"><img src="./images/side-icons/Applications.svg" alt="">SV Applications</a></li>
-                    <li><a href="#"><img src="./images/side-icons/Applications.svg" alt="">PA Applications</a></li>
-                    <li>
-                        <button class="btn btn-toggle align-items-center rounded collapsed shadow-none"
-                            data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                            <span><img src="./images/side-icons/Registration.svg" alt=""> Registration Apps</span>
-                            <span><i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></span>
-                        </button>
-                        <div class="collapse" id="orders-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded ps-5">Importer Applications</a></li>
-                                <li><a href="#" class="link-dark rounded ps-5">Manufacturer Applications</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><img src="./images/side-icons/Instrument.svg" alt=""> Instrument Management</a></li>
-                    <li><a href="#"><img src="./images/side-icons/Certificate.svg" alt="">Certificate Management</a>
-                    </li>
-                    <li>
-                        <button class="btn btn-toggle align-items-center rounded collapsed shadow-none"
-                            data-bs-toggle="collapse" data-bs-target="#orders-collapse-two" aria-expanded="false">
-                            <span><img src="./images/side-icons/Master.svg" alt="">Master Data</span>
-                            <span><i class="fa-solid fa-chevron-down" style="font-size: 12px;"></i></span>
-                        </button>
-                        <div class="collapse" id="orders-collapse-two">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded ps-5">Expense Management</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#" class="active"><img src="./images/side-icons/work.svg" alt="">Work Schedule
-                            Management</a></li>
-                    <li><a href="#"><img src="./images/side-icons/Communication.svg" alt="">Communication</a></li>
-                </ul>
-                <ul class="logout_wrapper list-unstyled">
-                    <li><a href="#"><img src="./images/side-icons/Help.svg" alt="">Help</a></li>
-                    <li class="logout"><a href="#"><img src="./images/side-icons/Logout.svg" alt="">Logout Account</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#enquiry">Book Online</a></li>
+                    <li class="nav-item d-lg-none mt-3">
+                        <a href="tel:07749716642" class="btn btn-call w-100"><i class="fas fa-phone-alt me-2"></i> Call
+                            Now</a>
                     </li>
                 </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="tab_wrapper">
-            <div class="tabs-scroll">
-                <ul class="nav nav-tabs" id="mainTab" role="tablist">
-                    <li class="nav-item">
-                        <button class="nav-link" type="button"><i class="fa-solid fa-house me-1"></i> Home</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link active" type="button">
-                            <span class="tab_item_close">
-                                Attendant Work Schedule <i class="fa-solid fa-xmark" style="font-size: 12px;"></i>
-                            </span>
-                        </button>
-                    </li>
-                </ul>
+    <header class="hero">
+        <div class="container text-center">
+            <h1 class="display-3">Premium Long Distance Travel</h1>
+            <p class="lead text-light">Premium long-distance transfers to London, Airports and major UK cities.</p>
+            
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
+                <a href="tel:07749716642" class="btn btn-lg btn-hero-call rounded-pill px-5 py-3">
+                    <i class="fas fa-phone-alt me-2"></i> Call Now
+                </a>
+                <a href="#enquiry" class="btn btn-lg btn-outline-light rounded-pill px-5 py-3">
+                    Get a Quote
+                </a>
             </div>
+        </div>
+    </header>
 
-            <div class="content_area">
-                <div class="view_header">
-                    <div class="view_title_group">
-                        <h1>
-                            Attendant Work Schedule - A.B Perera
-                        </h1>
-                        <p>November 2025</p>
+    <section class="service-note-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Why Choose Us?</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-road feature-icon"></i>
+                        <h4>Long Distance Specialists</h4>
+                        <p class="text-muted-custom">We are the experts in long-haul travel from Beeston. We prioritize
+                            comfort and reliability for airport runs and business trips.</p>
                     </div>
                 </div>
+                <div class="col-md-5 mb-4">
+                    <div class="feature-box">
+                        <i class="fas fa-map-marker-alt feature-icon"></i>
+                        <h4>Minimum Distance Policy</h4>
+                        <p class="text-muted-custom">To maintain efficiency for our long-distance clients, we only
+                            accept bookings for journeys <strong>over 5 miles</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="table_wrapper table-responsive">
-                    <table class="table table-responsive table-custom table-hover mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th scope="col" style="width: 25%;">Date</th>
-                                <th scope="col" style="width: 35%;">Planned Work</th>
-                                <th scope="col" style="width: 40%;">Work Location</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01 - Saturday</td>
-                                <td>Office</td>
-                                <td>Avery Scales</td>
-                            </tr>
-                            <tr>
-                                <td>02 - Sunday</td>
-                                <td>VC Stamping</td>
-                                <td>As Applicable</td>
-                            </tr>
-                            <tr class="row-empty-task">
-                                <td>03 - Monday</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>04 - Tuesday</td>
-                                <td>VC Stamping</td>
-                                <td>Gampaha VC</td>
-                            </tr>
-                            <tr>
-                                <td>05 - Wednesday</td>
-                                <td>VC Stamping</td>
-                                <td>As Applicable</td>
-                            </tr>
-                            <tr class="row-empty-task">
-                                <td>06 - Thursday</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr class="row-empty-task">
-                                <td>07 - Friday</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>08 - Saturday</td>
-                                <td>VC Stamping</td>
-                                <td>As Applicable</td>
-                            </tr>
-                            <tr>
-                                <td>09 - Sunday</td>
-                                <td>Raids</td>
-                                <td>As Applicable</td>
-                            </tr>
-                            <tr>
-                                <td>10 - Monday</td>
-                                <td>VC Stamping</td>
-                                <td>As Applicable</td>
-                            </tr>
-                            <tr class="row-empty-task">
-                                <td>11 - Tuesday</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="tab_content_footer mt-2">
-                        <div class="content_count">
-                            <span>Showing 10</span> of 25 Planned work schedules
+    <section id="prices" class="pricing-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Popular Routes</h2>
+                <p class="text-muted-custom mb-5">Estimated prices for our most popular long-distance routes.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card price-card p-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase small text-muted-custom">Airport Transfer</h5>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i> EMA
+                            </h3>
+                            <div class="price-amount">£35</div>
+                            <p class="text-muted-custom small mt-3">East Midlands Airport</p>
                         </div>
-                        <div class="pagination_container">
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M15.75 19.5 8.25 12l7.5-7.5" />
-                                </svg>
-                            </button>
-                            <button>1</button>
-                            <button>2</button>
-                            <button>3</button>
-                            <button>4</button>
-                            <button>5</button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                </svg>
-                            </button>
-                            <button>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card price-card p-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase small text-muted-custom">City Transfer</h5>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i>
+                                Birmingham</h3>
+                            <div class="price-amount">£100</div>
+                            <p class="text-muted-custom small mt-3">City Centre / Airport</p>
                         </div>
-                        <div class="page_select">
-                            <label>Go to page</label>
-                            <input type="number" value="2">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mx-auto">
+                    <div class="card price-card p-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-uppercase small text-muted-custom">City Transfer</h5>
+                            <h3 class="my-3">Beeston <i class="fas fa-long-arrow-alt-right text-secondary mx-2"></i>
+                                Manchester</h3>
+                            <div class="price-amount">£160</div>
+                            <p class="text-muted-custom small mt-3">City Centre / Airport</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="footer">
-        <span><img src="./images/footer_logo.svg" alt=""> Design & Developed by MillenniumIT ESP</span>
-    </div>
+    <section class="bg-dark text-white py-5 border-top border-secondary">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="text-warning mb-4 text-center">
+                        The Specialist Taxi Service: Beeston to London & Airports
+                    </h2>
+                    <p class="lead text-light">
+                        <strong>Beeston London Taxis</strong> is the premier long-distance transfer service for the <strong>NG9</strong> area. 
+                        While standard local cabs focus on short hops, we specialize exclusively in <strong>long-haul journeys to London</strong> and major UK airports.
+                        We provide a stress-free, executive travel experience for residents of <strong>Beeston, Chilwell, Attenborough, Toton, and Bramcote</strong>.
+                    </p>
+                    <p class="text-secondary">
+                        Why take the train? Avoid the hassle of St Pancras connections, tube strikes, and luggage hauling. 
+                        Our door-to-door service takes you from your home in Nottinghamshire directly to <strong>Heathrow Terminal 5</strong>, 
+                        <strong>Gatwick</strong>, or <strong>Central London</strong> in comfort and style.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-12 text-center mb-3">
+                    <h3 class="section-title">Our Key Transfer Routes</h3>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-plane-departure text-warning me-2"></i> Taxi Beeston to Heathrow Airport</h4>
+                        <p class="text-secondary mt-3">
+                            We are the experts in the <strong>Beeston to Heathrow</strong> route. Whether you are flying from Terminal 2, 3, 4, or 5, 
+                            we monitor traffic on the M1 and M25 to ensure you arrive with time to spare. 
+                            Our fixed-price quotes are often cheaper than peak-time rail fares for couples or groups. 
+                            <strong>Book your NG9 to LHR transfer today.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-city text-warning me-2"></i> Beeston to Central London</h4>
+                        <p class="text-secondary mt-3">
+                            Need to get to a meeting in The City, Canary Wharf, or a hotel in Mayfair? 
+                            Our <strong>Beeston to London taxi service</strong> offers a mobile office environment. 
+                            Work comfortably in the back seat while we handle the driving. We also cover trips to 
+                            <strong>London Gatwick (LGW)</strong>, <strong>Stansted</strong>, and <strong>Luton Airport</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-road text-warning me-2"></i> East Midlands Airport (EMA)</h4>
+                        <p class="text-secondary mt-3">
+                            Although we specialize in London routes, we are your local choice for <strong>East Midlands Airport transfers</strong>. 
+                            Located just 20 minutes away, we offer a reliable 24/7 service for early morning flights. 
+                            Don't rely on ride-share apps that might cancel at 4 AM—book a guaranteed slot with <strong>Beeston London Taxis</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 border border-secondary rounded h-100 bg-black">
+                        <h4 class="text-white"><i class="fas fa-briefcase text-warning me-2"></i> Birmingham & Manchester</h4>
+                        <p class="text-secondary mt-3">
+                            We cover all major UK transport hubs. From <strong>Beeston to Birmingham Airport (BHX)</strong> or 
+                            long-distance runs to <strong>Manchester Airport (MAN)</strong>, our executive fleet is ready. 
+                            We prioritize comfort for these longer journeys, ensuring you arrive refreshed and ready to fly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h3 class="h5 text-light mb-3">Areas We Cover (NG9 & Beyond)</h3>
+                    <p class="text-secondary small">
+                        While we are based in Beeston, our long-distance taxi service covers:
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge bg-secondary">Beeston</span>
+                        <span class="badge bg-secondary">Chilwell</span>
+                        <span class="badge bg-secondary">Attenborough</span>
+                        <span class="badge bg-secondary">Toton</span>
+                        <span class="badge bg-secondary">Bramcote</span>
+                        <span class="badge bg-secondary">Stapleford</span>
+                        <span class="badge bg-secondary">Wollaton</span>
+                        <span class="badge bg-secondary">Long Eaton</span>
+                        <span class="badge bg-secondary">Lenton Abbey</span>
+                        <span class="badge bg-secondary">Ilkeston</span>
+                        <span class="badge bg-secondary">Nottingham</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="text-center text-warning mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion accordion-flush" id="seoFaq">
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-1">
+                                    How much is a taxi from Beeston to Heathrow Airport?
+                                </button>
+                            </h2>
+                            <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    Our executive transfers from Beeston to Heathrow start from competitive fixed prices. 
+                                    Please use our quote form or call <strong>07749 716642</strong> for the latest rates. 
+                                    We are often cheaper than the train for groups of 2 or more.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-2">
+                                    Do you do local taxi runs in Beeston?
+                                </button>
+                            </h2>
+                            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    To maintain availability for our long-distance clients going to London and Airports, 
+                                    we operate a <strong>minimum distance policy of 5 miles</strong>. We recommend local minicabs for short trips to the shops.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bg-black text-white border border-secondary mb-2 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white shadow-none" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-3">
+                                    How do I book a taxi from Beeston to London?
+                                </button>
+                            </h2>
+                            <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#seoFaq">
+                                <div class="accordion-body text-secondary">
+                                    You can book instantly by calling 07749 716642, or use our <strong>Online Enquiry Form</strong> above. 
+                                    We will confirm your booking via WhatsApp and provide driver details before travel.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="enquiry" class="contact-section">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <div class="text-center mb-4">
+                            <h2>Make an Enquiry</h2>
+                            <p>Fill out the details below for a WhatsApp quote.</p>
+                        </div>
+
+                        <form id="quoteForm" autocomplete="off">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="mb-2" for="pickup">Pick-up Location</label>
+                                    <div class="input-group autocomplete-wrapper">
+                                        <span class="input-group-text bg-secondary border-secondary text-white"><i
+                                                class="fas fa-map-pin"></i></span>
+                                        <input type="text" id="pickup" class="form-control"
+                                            placeholder="Start typing address..." required>
+                                        <div id="pickup-list" class="suggestions-list"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label class="mb-2" for="dropoff">Drop-off Location</label>
+                                    <div class="input-group autocomplete-wrapper">
+                                        <span class="input-group-text bg-secondary border-secondary text-white"><i
+                                                class="fas fa-flag-checkered"></i></span>
+                                        <input type="text" id="dropoff" class="form-control"
+                                            placeholder="Start typing address..." required>
+                                        <div id="dropoff-list" class="suggestions-list"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="mb-2" for="date">Date</label>
+                                    <input type="date" id="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="mb-2" for="time">Time</label>
+                                    <input type="time" id="time" class="form-control" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 mt-2">
+                                <label class="mb-2" for="details">Contact Name / Notes</label>
+                                <input type="text" id="details" class="form-control"
+                                    placeholder="Name or extra requirements" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-submit rounded-pill">
+                                <i class="fab fa-whatsapp me-2"></i> Get Quote on WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3 class="mb-3">Book your Beeston Taxi Today</h3>
+            <a href="tel:07749716642" class="text-decoration-none display-6 text-warning fw-bold">07749 716642</a>
+            <p class="text-muted-custom mt-4 mb-0">&copy; 2025 Beeston London Taxis. Serving Beeston, Nottingham &
+                Beyond.</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Sidebar Toggles
-            const menuToggle = document.getElementById('menuToggle');
-            const sideMenu = document.getElementById('sideMenu');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
+        // --- 1. THEME SWITCHER LOGIC ---
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const htmlElement = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
 
-            if (menuToggle && sideMenu && sidebarOverlay) {
-                menuToggle.addEventListener('click', function () {
-                    sideMenu.classList.toggle('active');
-                    sidebarOverlay.classList.toggle('active');
-                });
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+        function updateIcon(theme) {
+            themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
 
-                sidebarOverlay.addEventListener('click', function () {
-                    sideMenu.classList.remove('active');
-                    sidebarOverlay.classList.remove('active');
-                });
-            }
+        // --- 2. AUTO-SUGGEST LOGIC (UK ONLY) ---
+        function setupAutocomplete(inputId, listId) {
+            const input = document.getElementById(inputId);
+            const list = document.getElementById(listId);
+            let timeout = null;
+
+            input.addEventListener('input', function () {
+                const query = this.value;
+
+                // Clear existing timeout (debounce)
+                if (timeout) clearTimeout(timeout);
+
+                if (query.length < 3) {
+                    list.style.display = 'none';
+                    return;
+                }
+
+                // Wait 300ms after typing stops before searching
+                timeout = setTimeout(() => {
+                    // API Call to Photon (OpenStreetMap data)
+                    // bbox limits to roughly UK area to prioritize UK results
+                    fetch(`https://photon.komoot.io/api/?q=${query}&limit=5&bbox=-6,49.8,1.8,56`)
+                        .then(response => response.json())
+                        .then(data => {
+                            list.innerHTML = ''; // Clear old results
+
+                            if (data.features.length > 0) {
+                                list.style.display = 'block';
+                                data.features.forEach(feature => {
+                                    const props = feature.properties;
+                                    // Build address string
+                                    const addressParts = [
+                                        props.name,
+                                        props.street,
+                                        props.city,
+                                        props.postcode
+                                    ].filter(Boolean);
+                                    const addressText = addressParts.join(', ');
+
+                                    const div = document.createElement('div');
+                                    div.classList.add('suggestion-item');
+                                    // Highlight the matching text part (basic)
+                                    div.innerHTML = `<i class="fas fa-map-marker-alt text-muted me-2"></i> ${addressText}`;
+
+                                    div.addEventListener('click', function () {
+                                        input.value = addressText;
+                                        list.style.display = 'none';
+                                    });
+                                    list.appendChild(div);
+                                });
+                            } else {
+                                list.style.display = 'none';
+                            }
+                        })
+                        .catch(err => console.error('Autocomplete error:', err));
+                }, 300);
+            });
+
+            // Close list if clicked outside
+            document.addEventListener('click', function (e) {
+                if (e.target !== input && e.target !== list) {
+                    list.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize autocomplete on both fields
+        setupAutocomplete('pickup', 'pickup-list');
+        setupAutocomplete('dropoff', 'dropoff-list');
+
+
+        // --- 3. WHATSAPP LOGIC ---
+        document.getElementById('quoteForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const pickup = document.getElementById('pickup').value;
+            const dropoff = document.getElementById('dropoff').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const details = document.getElementById('details').value;
+
+            const message = `*Beeston London Taxis - Enquiry* %0a` +
+                `---------------------------%0a` +
+                `📍 *Pick-up:* ${pickup}%0a` +
+                `🏁 *Drop-off:* ${dropoff}%0a` +
+                `📅 *Date:* ${date}%0a` +
+                `⏰ *Time:* ${time}%0a` +
+                `📝 *Details:* ${details}%0a` +
+                `---------------------------%0a` +
+                `Please provide a price quote.`;
+
+            const phoneNumber = "447749716642";
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         });
     </script>
 </body>
